@@ -1,4 +1,4 @@
-## Persiapan
+## Persiapan Development
 jalankan 'command' ini 
 ```bash
  npm install
