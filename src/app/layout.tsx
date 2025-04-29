@@ -8,6 +8,7 @@ import Header from "@/components/global/Header";
 import { usePathname } from "next/navigation";
 import { getUser } from "@/components/lib/Cookie";
 import NextTopLoader from "nextjs-toploader";
+import Image from "next/image";
 import "./globals.css";
 
 const font = Poppins({
@@ -64,31 +65,31 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <head>
           <title>{APP_NAME}</title>
           <meta name="description" content={APP_NAME} />
-          <link rel="icon" href="/logo-1.png" />
+          <link rel="icon" href="/logo.png" />
         </head>
         <body>
-          <div className="flex min-h-screen">
-            {/* LEFT SIDE */}
-            <div className="relative hidden md:flex w-3/4 items-center justify-center bg-cover bg-center"
-              style={{
-                backgroundImage: "url('/backgrounds/login-bg.png')",
-                backgroundSize: "contain",  // Fit the image inside the box
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-black/40"></div>
-
-              {/* JUDUL */}
-              <div className="relative z-10 bg-white/20 backdrop-blur-lg p-10 rounded-xl max-w-lg text-center text-white">
-                <h1 className="text-5xl font-bold">{APP_NAME}</h1>
-                <p className="mt-3 text-lg">Rapi, Efisien, Paperless</p>
+          <div className="flex flex-wrap justify-center items-center h-screen"
+            style={{
+              backgroundImage: "url('/backgrounds/login-bg-2.png')",
+              backgroundSize: "cover",  // Fit the image inside the box
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="flex flex-wrap justify-center items-center gap-5 m-5 rounded-lg border bg-gray-300 hover:bg-white border-white shadow-lg shadow-white">
+              <div className="flex flex-col justify-center items-center gap-3 m-2">
+                <Image 
+                  className="mx-[100px]"
+                  src="/logo.png"
+                  alt="logo"
+                  width={90}
+                  height={90}
+                />
+                <h1 className="uppercase font-bold text-xl">KOTA SEMARANG</h1>
               </div>
-            </div>
-            {/* LOGIN FORM */}
-            <div className="w-1/4 flex items-center justify-center p-10">
-              <div className={`${font.className} w-full max-w-md space-y-6`}>{children}</div>
+              {/* LOGIN FORM */}
+              <div className="bg-gradient-to-tl from-[#cfa86a] to-[#eed920] rounded-tr-lg rounded-br-lg flex items-center justify-center p-10">
+                <div className={`${font.className} w-full max-w-md`}>{children}</div>
+              </div>
             </div>
           </div>
         </body>
@@ -101,7 +102,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <head>
         <title>{APP_NAME}</title>
         <meta name="description" content={APP_NAME} />
-        <link rel="icon" href="/logo-1.png" />
+        <link rel="icon" href="/logo.png" />
       </head>
       <body className="flex">
         <NextTopLoader

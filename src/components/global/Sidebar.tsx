@@ -1478,7 +1478,7 @@ export const Sidebar = ({ isZoomed, isOpen, toggleSidebar }: SidebarProps) => {
       {/* tombol sidebar zoom 150% */}
       {isZoomed && (
         <div
-          className={`fixed top-1 bg-gradient-to-bl from-[#182C4E] to-[#17212D] border border-white p-2 cursor-pointer duration-200 text-white rounded-md z-50 ${!isOpen ? 'rotate-180 ' : 'left-[13rem]'}`}
+          className={`fixed top-1 bg-gradient-to-bl from-[#1b1c1c] to-[#212121] border border-white p-2 cursor-pointer duration-200 text-white rounded-md z-50 ${!isOpen ? 'rotate-180 ' : 'left-[13rem]'}`}
           onClick={() => toggleSidebar()}
         >
           <TbCircleArrowLeftFilled />
@@ -1486,11 +1486,11 @@ export const Sidebar = ({ isZoomed, isOpen, toggleSidebar }: SidebarProps) => {
       )}
 
       {/* awal sidebar */}
-      <div className={`bg-gradient-to-bl from-[#182C4E] to-[#17212D] overflow-y-auto text-white h-full ${isOpen ? 'w-64 py-5 px-3' : 'w-0'} duration-300 fixed custom-scrollbar`}>
+      <div className={`bg-gradient-to-bl from-[#1b1c1c] to-[#212121] overflow-y-auto text-white h-full ${isOpen ? 'w-64 py-5 px-3' : 'w-0'} duration-300 fixed custom-scrollbar`}>
         <div className="flex items-center justify-center">
           <Image
             className="mb-3 transition-all duration-300 ease-in-out"
-            src="/logo-1.png"
+            src="/logo.png"
             alt="logo"
             width={!isZoomed ? 80 : 80}
             height={!isZoomed ? 80 : 80}
